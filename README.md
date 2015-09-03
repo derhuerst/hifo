@@ -4,7 +4,7 @@
 
 If you have a large number of values, but you're only interested in the `n` highest (or lowest) ones, you can sort them using *hifo*.
 
-- *hifo* is **fast**. Its [time complexity is `O(n)`](https://en.wikipedia.org/wiki/Time_complexity#Linear_time).
+- *hifo* is **fast**. To find the highest `m` of `n` values, the [time complexity is `O(m * n)`](https://en.wikipedia.org/wiki/Time_complexity#Linear_time).
 - It is **memory-efficient**. If you specifiy its size as `50`, it will only store 50 values in memory.
 - *hifo* works with **numeric values** and **simple objects** out of the box, but you can pass your own [`sort` function](#todo).
 

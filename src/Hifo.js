@@ -38,7 +38,6 @@ module.exports = {
 
 	reset: function () {
 		this.data = [];
-		this.lowest = null;
 		return this;
 	},
 

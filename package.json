@@ -2,7 +2,7 @@
 	"name": "hifo",
 	"description": "Stores & sorts only the highest values.",
 	"version": "0.1.0",
-	"main": "./src/index",
+	"main": "./src/index.js",
 	"keywords": [
 		"sort",
 		"sorting",
@@ -18,10 +18,7 @@
 		"url": "http://jannisr.de"
 	},
 	"homepage": "https://github.com/derhuerst/hifo",
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/derhuerst/hifo.git"
-	},
+	"repository": "git://github.com/derhuerst/hifo.git",
 	"bugs": {
 		"url": "https://github.com/derhuerst/hifo/issues"
 	},

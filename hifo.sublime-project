@@ -9,6 +9,7 @@
 			"folder_exclude_patterns":
 			[
 				"src",
+				"test",
 				"node_modules"
 			],
 			"name": "vbb-util",
@@ -17,6 +18,10 @@
 		{
 			"name": "src",
 			"path": "src"
+		},
+		{
+			"name": "test",
+			"path": "test"
 		}
 	],
 	"settings":

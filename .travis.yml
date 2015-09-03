@@ -1,0 +1,11 @@
+language: node_js
+
+node_js:
+  - "stable"
+  - "iojs"
+
+script:
+  - "npm test"
+
+notifications:
+  email: false

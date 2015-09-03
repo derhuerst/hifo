@@ -1,0 +1,36 @@
+{
+	"name": "hifo",
+	"description": "Stores & sorts only the highest values.",
+	"moduleType": "node",
+	"main": "src/index.js",
+	"keywords": [
+		"sort",
+		"sorting",
+		"highest in first out",
+		"hifo",
+		"array",
+		"filter",
+		"javascript"
+	],
+	"author": {
+		"name": "Jannis R",
+		"email": "mail@jannisr.de",
+		"url": "http://jannisr.de"
+	},
+	"homepage": "https://github.com/derhuerst/hifo",
+	"repository": "git://github.com/derhuerst/hifo.git",
+	"license": "MIT",
+	"ignore": [
+		".DS_Store",
+		"Thumbs.db",
+		".nvm-version",
+		"node_modules",
+		"npm-debug.log",
+		".editorconfig",
+		".gitignore",
+		".npmignore",
+		".travis.yml",
+		"hifo.sublime-project",
+		"hifo.sublime-workspace"
+	]
+}

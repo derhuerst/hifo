@@ -18,21 +18,18 @@ module.exports = {
 		var i;
 
 		// `this.data` is empty
-		if (this.data.length === 0) this.data.push(entry);
+		if (this.data.length === 0) {
+			this.data.push(entry);
+			return this;
+		}
 
-		// `this.data` is not full yet
-		else if (this.data.length < this.size) {
-			i = this.data.length - 1;
-			while (i > 0 && 0 <= this.sort(this.data[i], entry)) i--;
-			this.data.splice(i, 0, entry);   // add
-		}
+		// move forward
+		i = this.data.length - 1;
+		while (i >= 0 && this.sort(this.data[i], entry) > 0) i--;
+		this.data.splice(i + 1, 0, entry);   // add
+
 		// `this.data` is full
-		else if (0 <= this.sort(this.data[this.size - 1], entry)) {
-			i = this.size - 1;
-			while (i > 0 && 0 <= this.sort(this.data[i], entry)) i--;
-			this.data.splice(i, 0, entry);   // add
-			this.data.pop();   // remove last
-		}
+		if (this.data.length > this.size) this.data.pop();   // remove last
 
 		return this;
 	},

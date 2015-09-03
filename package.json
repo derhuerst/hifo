@@ -1,0 +1,32 @@
+{
+	"name": "hifo",
+	"description": "Stores & sorts only the highest values.",
+	"version": "0.1.0",
+	"main": "./src/index",
+	"keywords": [
+		"sort",
+		"sorting",
+		"highest in first out",
+		"hifo",
+		"array",
+		"filter",
+		"javascript"
+	],
+	"author": {
+		"name": "Jannis R",
+		"email": "mail@jannisr.de",
+		"url": "http://jannisr.de"
+	},
+	"homepage": "https://github.com/derhuerst/hifo",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/derhuerst/hifo.git"
+	},
+	"bugs": {
+		"url": "https://github.com/derhuerst/hifo/issues"
+	},
+	"license": "MIT",
+	"directories": {
+		"lib":		"./src"
+	}
+}

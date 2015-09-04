@@ -23,6 +23,10 @@ module.exports = {
 			return this;
 		}
 
+		// check if `entry` exists
+		if (i = this.data.indexOf(entry) >= 0)
+			this.data.splice(i, 1);   // add
+
 		// move forward
 		i = this.data.length - 1;
 		while (i >= 0 && this.sort(this.data[i], entry) > 0) i--;

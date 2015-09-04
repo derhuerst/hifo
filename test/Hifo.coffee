@@ -98,6 +98,19 @@ describe 'Hifo', () ->
 			assert.equal instance.data[0], obj2
 			assert.equal instance.data[1], obj1
 
+		it 'should delete the object first if it is already stored', () ->
+			instance = Object.create Hifo
+			instance.init instance.highest('value')
+			obj1 = { name: 'a', value: 1 }
+			instance.add obj1
+			instance.add { name: 'b', value: 2 }
+			obj1.value = 3
+			instance.add obj1
+			appearances = 0
+			for entry in instance.data
+				++appearances if entry is obj1
+			assert.equal appearances, 1
+
 
 
 	describe 'reset', () ->

@@ -25,11 +25,11 @@ module.exports = {
 
 		// check if `entry` exists
 		if (i = this.data.indexOf(entry) >= 0)
-			this.data.splice(i, 1);   // add
+			this.data.splice(i, 1);   // delete
 
 		// move forward
 		i = this.data.length - 1;
-		while (i >= 0 && this.sort(this.data[i], entry) > 0) i--;
+		while (i >= 0 && this.sort(this.data[i], entry) >= 0) i--;
 		this.data.splice(i + 1, 0, entry);   // add
 
 		// `this.data` is full

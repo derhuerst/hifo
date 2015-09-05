@@ -83,8 +83,8 @@ describe 'Hifo', () ->
 
 		it 'should store the passed object directly', () ->
 			instance = hifo hifo.highest 'value'
-			obj1 = { name: 'a', value: 1 }
-			obj2 = { name: 'b', value: 2 }
+			obj1 = { value: 1 }
+			obj2 = { value: 2 }
 
 			instance.add obj1
 			instance.add obj2
@@ -93,15 +93,23 @@ describe 'Hifo', () ->
 
 		it 'should delete the object first if it is already stored', () ->
 			instance = hifo hifo.highest 'value'
-			obj1 = { name: 'a', value: 1 }
+			obj1 = { value: 1 }
 			instance.add obj1
-			instance.add { name: 'b', value: 2 }
+			instance.add { value: 2 }
 			obj1.value = 3
 			instance.add obj1
 			appearances = 0
 			for entry in instance.data
 				++appearances if entry is obj1
 			assert.equal appearances, 1
+
+		it 'should put new but equal objects always before the existing', () ->
+			instance = hifo hifo.highest 'value'
+			obj1 = { value: 2 }
+			obj2 = { value: 2 }
+			instance.add obj1
+			instance.add obj2
+			assert instance.data.indexOf(obj1) > instance.data.indexOf obj2
 
 
 

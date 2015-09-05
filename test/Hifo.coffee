@@ -61,6 +61,19 @@ describe 'Hifo', () ->
 				{ value: 3 }
 			]
 
+		it 'should sort object `data` by `lowest(\'a\', \'b\')`', () ->
+			instance = hifo hifo.lowest 'a', 'b'
+			instance.add { a: 2, b: 2 }
+			instance.add { a: 1, b: 3 }
+			instance.add { a: 1, b: 0 }
+			instance.add { a: 2, b: 3 }
+			assert.deepEqual instance.data, [
+				{ a: 1, b: 0 }
+				{ a: 1, b: 3 }
+				{ a: 2, b: 2 }
+				{ a: 2, b: 3 }
+			]
+
 		it 'should sort object `data` by `highest(\'value\')`', () ->
 			instance = hifo hifo.highest 'value'
 			instance.add { value: 2 }
@@ -70,6 +83,19 @@ describe 'Hifo', () ->
 				{ value: 3 }
 				{ value: 2 }
 				{ value: 1 }
+			]
+
+		it 'should sort object `data` by `highest(\'a\', \'b\')`', () ->
+			instance = hifo hifo.highest 'a', 'b'
+			instance.add { a: 1, b: 3 }
+			instance.add { a: 1, b: 0 }
+			instance.add { a: 2, b: 2 }
+			instance.add { a: 2, b: 3 }
+			assert.deepEqual instance.data, [
+				{ a: 2, b: 3 }
+				{ a: 2, b: 2 }
+				{ a: 1, b: 3 }
+				{ a: 1, b: 0 }
 			]
 
 		it 'should not modify the object passed', () ->

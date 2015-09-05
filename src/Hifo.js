@@ -23,6 +23,11 @@ module.exports = {
 			return this;
 		}
 
+		// abort if `entry` is lower than the last
+		if (this.data.length >= this.size
+		&& this.sort(this.data[this.data.length - 1], entry) > 0)
+			return this;
+
 		// check if `entry` exists
 		if (i = this.data.indexOf(entry) >= 0)
 			this.data.splice(i, 1);   // delete

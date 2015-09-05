@@ -98,12 +98,13 @@ describe 'Hifo', () ->
 			instance.add { value: 2 }
 			obj1.value = 3
 			instance.add obj1
+
 			appearances = 0
 			for entry in instance.data
 				++appearances if entry is obj1
 			assert.equal appearances, 1
 
-		it 'should put new but equal objects always before the existing', () ->
+		it 'should put new but equal objects before the existing', () ->
 			instance = hifo hifo.highest 'value'
 			obj1 = { value: 2 }
 			obj2 = { value: 2 }

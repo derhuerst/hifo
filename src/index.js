@@ -11,3 +11,23 @@ var factory = module.exports = function (sort, options) {
 };
 
 factory.Hifo = Hifo;
+
+
+
+var lowest = function (a, b) { return a - b };
+
+factory.lowest = function (key) {
+	if (typeof key === 'string')
+		return function (a, b) { return a[key] - b[key] };
+	else return lowest;
+};
+
+
+
+var highest = function (a, b) { return b - a };
+
+factory.highest = function (key) {
+	if (typeof key === 'string')
+		return function (a, b) { return b[key] - a[key] };
+	else return highest;
+};

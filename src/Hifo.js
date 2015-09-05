@@ -43,30 +43,6 @@ module.exports = {
 	reset: function () {
 		this.data = [];
 		return this;
-	},
-
-
-
-	_lowest: function (a, b) {
-		return a - b;
-	},
-	lowest: function (key) {
-		if (typeof key === 'string')
-			return function (a, b) {
-				return a[key] - b[key]
-			};
-		else return this._lowest;
-	},
-
-	_highest: function (a, b) {
-		return b - a;
-	},
-	highest: function (key) {
-		if (typeof key === 'string')
-			return function (a, b) {
-				return b[key] - a[key];
-			};
-		else return this._highest;
 	}
 
 

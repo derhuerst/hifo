@@ -25,7 +25,7 @@ module.exports = {
 
 		// abort if `entry` is lower than the last
 		if (this.data.length >= this.size
-		&& this.sort(this.data[this.data.length - 1], entry) > 0)
+		&& this.sort(this.data[this.data.length - 1], entry) < 0)
 			return this;
 
 		// check if `entry` exists

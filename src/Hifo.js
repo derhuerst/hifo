@@ -29,8 +29,8 @@ module.exports = {
 			return this;
 
 		// check if `entry` exists
-		if (i = this.data.indexOf(entry) >= 0)
-			this.data.splice(i, 1);   // delete
+		i = this.data.indexOf(entry);
+		if (i >= 0) this.data.splice(i, 1);   // delete
 
 		// move forward
 		i = this.data.length - 1;

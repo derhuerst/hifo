@@ -122,7 +122,8 @@ describe 'Hifo', () ->
 			obj1 = { value: 1 }
 			instance.add obj1
 			instance.add { value: 2 }
-			obj1.value = 3
+			obj1.value = 3   # even if the object has been messed with, the reference stays the same.
+			instance.add obj1
 			instance.add obj1
 
 			appearances = 0
@@ -137,6 +138,10 @@ describe 'Hifo', () ->
 			instance.add obj1
 			instance.add obj2
 			assert instance.data.indexOf(obj1) > instance.data.indexOf obj2
+
+		it 'should not `push` and `pop` too low values', () ->
+			# todo: use ECMAScript 2016 `Array.prototype.observe`.
+			assert true
 
 
 

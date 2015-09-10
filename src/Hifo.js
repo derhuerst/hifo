@@ -15,18 +15,25 @@ module.exports = {
 
 
 	add: function (entry) {
+		this.insert(entry);
+		return this;
+	},
+
+
+
+	insert: function (entry) {
 		var i;
 
 		// `this.data` is empty
 		if (this.data.length === 0) {
 			this.data.push(entry);
-			return this;
+			return 0;
 		}
 
 		// abort if `entry` is lower than the last
 		if (this.data.length >= this.size
 		&& this.sort(this.data[this.data.length - 1], entry) < 0)
-			return this;
+			return;
 
 		// check if `entry` exists
 		i = this.data.indexOf(entry);
@@ -40,7 +47,7 @@ module.exports = {
 		// `this.data` is full
 		if (this.data.length > this.size) this.data.pop();   // remove last
 
-		return this;
+		return i + 1;
 	},
 
 

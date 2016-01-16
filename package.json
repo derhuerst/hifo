@@ -1,7 +1,7 @@
 {
 	"name": "hifo",
 	"description": "Stores & sorts only the highest values.",
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"main": "./src/index.js",
 	"keywords": [
 		"sort",

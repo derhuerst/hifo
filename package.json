@@ -24,7 +24,7 @@
 	"bugs": {
 		"url": "https://github.com/derhuerst/hifo/issues"
 	},
-	"license": "MIT",
+	"license": "ISC",
 	"devDependencies": {
 		"coffee-script":		"^1.9.3",
 		"mocha":				"^2.2.5",

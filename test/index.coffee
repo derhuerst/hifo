@@ -20,8 +20,8 @@ describe 'index', () ->
 
 		it 'should sort object values correctly', () ->
 			sort = hifo.lowest 'test'
-			assert 0 > sort { test: 4 }, { test: 5 }
-			assert 0 < sort { test: -1 }, { test: -2 }
+			assert 0 > sort {test: 4}, {test: 5}
+			assert 0 < sort {test: -1}, {test: -2}
 
 
 
@@ -34,5 +34,5 @@ describe 'index', () ->
 
 		it 'should sort object values correctly', () ->
 			sort = hifo.highest 'test'
-			assert 0 < sort { test: 4 }, { test: 5 }
-			assert 0 > sort { test: -1 }, { test: -2 }
+			assert 0 < sort {test: 4}, {test: 5}
+			assert 0 > sort {test: -1}, {test: -2}

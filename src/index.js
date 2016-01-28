@@ -4,11 +4,13 @@ var Hifo =		require('./Hifo');
 
 
 
-var factory = module.exports = function (sort, options) {
+var factory = function (sort, options) {
 	var instance = Object.create(Hifo);
 	instance.init(sort, options);
 	return instance;
 };
+
+
 
 factory.Hifo = Hifo;
 
@@ -23,7 +25,7 @@ factory.lowest = function (primary, secondary) {
 			if (d === 0) return a[secondary] - b[secondary];
 			else return d;
 		};
-	else if (typeof primary === 'string')
+	else if ('string' === typeof primary)
 		return function (a, b) { return a[primary] - b[primary] };
 	else return lowest;
 };
@@ -39,7 +41,13 @@ factory.highest = function (primary, secondary) {
 			if (d === 0) return b[secondary] - a[secondary];
 			else return d;
 		};
-	else if (typeof primary === 'string')
+	else if ('string' === typeof primary)
 		return function (a, b) { return b[primary] - a[primary] };
 	else return highest;
 };
+
+
+
+
+
+module.exports = factory;

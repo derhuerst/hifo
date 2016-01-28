@@ -1,8 +1,8 @@
 {
-	"name": "hifo",
+	"name":        "hifo",
 	"description": "Stores & sorts only the highest values.",
-	"version": "0.5.0",
-	"main": "./src/index.js",
+	"version":     "0.5.0",
+	"main":        "./src/index.js",
 	"keywords": [
 		"sort",
 		"sorting",
@@ -14,27 +14,21 @@
 		"filter",
 		"javascript"
 	],
-	"author": {
-		"name": "Jannis R",
-		"email": "mail@jannisr.de",
-		"url": "http://jannisr.de"
-	},
-	"homepage": "https://github.com/derhuerst/hifo",
-	"repository": "git://github.com/derhuerst/hifo.git",
-	"bugs": {
-		"url": "https://github.com/derhuerst/hifo/issues"
-	},
-	"license": "ISC",
+	"author":      "Jannis R <mail@jannisr.de>",
+	"license":     "ISC",
+	"homepage":    "https://github.com/derhuerst/hifo",
+	"repository":  "git://github.com/derhuerst/hifo.git",
+	"bugs":        "https://github.com/derhuerst/hifo/issues",
 	"devDependencies": {
 		"coffee-script":		"^1.10.0",
 		"mocha":				"^2.3.4",
 		"mocha-tldr-reporter":	"^1.0.0"
 	},
 	"directories": {
-		"lib":		"./src",
-		"test":		"./test"
+		"lib":     "./src",
+		"test":    "./test"
 	},
 	"scripts": {
-		"test":		"mocha --compilers coffee:coffee-script/register --reporter mocha-tldr-reporter ./test"
+		"test":    "mocha --compilers coffee:coffee-script/register --reporter mocha-tldr-reporter ./test"
 	}
 }

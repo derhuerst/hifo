@@ -13,7 +13,7 @@ If you have a large number of values, but you're only interested in the `n` high
 [![build status](https://img.shields.io/travis/derhuerst/hifo.svg)](https://travis-ci.org/derhuerst/hifo)
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/hifo.svg)](https://david-dm.org/derhuerst/hifo#info=devDependencies)
 
-*hifo* is **[MIT-licensed](LICENSE)**, [thoroughly unit-tested](test/) and embraces [prototypal programming](http://davidwalsh.name/javascript-objects-deconstruction#simpler-object-object).
+*hifo* is **[ISC-licensed](LICENSE)**, [thoroughly unit-tested](test/) and embraces [prototypal programming](http://davidwalsh.name/javascript-objects-deconstruction#simpler-object-object).
 
 
 

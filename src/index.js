@@ -1,53 +1,53 @@
-var Hifo =		require('./Hifo');
+var Hifo =		require('./Hifo')
 
 
 
 
 
 var factory = function (sort, options) {
-	var instance = Object.create(Hifo);
-	instance.init(sort, options);
-	return instance;
-};
+	var instance = Object.create(Hifo)
+	instance.init(sort, options)
+	return instance
+}
 
 
 
-factory.Hifo = Hifo;
+factory.Hifo = Hifo
 
 
 
-var lowest = function (a, b) { return a - b };
+var lowest = function (a, b) { return a - b }
 
 factory.lowest = function (primary, secondary) {
 	if (arguments.length === 2)
 		return function (a, b) {
-			var d = a[primary] - b[primary];
-			if (d === 0) return a[secondary] - b[secondary];
-			else return d;
-		};
+			var d = a[primary] - b[primary]
+			if (d === 0) return a[secondary] - b[secondary]
+			else return d
+		}
 	else if ('string' === typeof primary)
-		return function (a, b) { return a[primary] - b[primary] };
-	else return lowest;
-};
+		return function (a, b) { return a[primary] - b[primary] }
+	else return lowest
+}
 
 
 
-var highest = function (a, b) { return b - a };
+var highest = function (a, b) { return b - a }
 
 factory.highest = function (primary, secondary) {
 	if (arguments.length === 2)
 		return function (a, b) {
-			var d = b[primary] - a[primary];
-			if (d === 0) return b[secondary] - a[secondary];
-			else return d;
-		};
+			var d = b[primary] - a[primary]
+			if (d === 0) return b[secondary] - a[secondary]
+			else return d
+		}
 	else if ('string' === typeof primary)
-		return function (a, b) { return b[primary] - a[primary] };
-	else return highest;
-};
+		return function (a, b) { return b[primary] - a[primary] }
+	else return highest
+}
 
 
 
 
 
-module.exports = factory;
+module.exports = factory

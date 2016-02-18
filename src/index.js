@@ -25,7 +25,7 @@ factory.lowest = function (primary, secondary) {
 			if (d === 0) return a[secondary] - b[secondary]
 			else return d
 		}
-	else if ('string' === typeof primary)
+	if (arguments.length === 1)
 		return function (a, b) { return a[primary] - b[primary] }
 	else return lowest
 }
@@ -41,7 +41,7 @@ factory.highest = function (primary, secondary) {
 			if (d === 0) return b[secondary] - a[secondary]
 			else return d
 		}
-	else if ('string' === typeof primary)
+	if (arguments.length === 1)
 		return function (a, b) { return b[primary] - a[primary] }
 	else return highest
 }

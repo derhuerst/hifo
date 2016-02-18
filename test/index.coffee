@@ -29,6 +29,11 @@ describe 'index', () ->
 				assert 0 > sort {test:  4}, {test:  5}
 				assert 0 < sort {test: -1}, {test: -2}
 
+			it 'should sort array values correctly', () ->
+				sort = hifo.lowest 1
+				assert 0 > sort [x,  4, x], [x,  5]
+				assert 0 < sort [x, -1],    [x, -2, x]
+
 		context '2-ary sort', ->
 
 			it 'should sort object values correctly', () ->
@@ -37,6 +42,13 @@ describe 'index', () ->
 				assert 0 > sort {foo:  1, bar:  4}, {foo:  1, bar:  5}
 				assert 0 < sort {foo: -1},          {foo: -2}
 				assert 0 < sort {foo:  1, bar: -1}, {foo:  1, bar: -2}
+
+			it 'should sort array values correctly', () ->
+				sort = hifo.lowest 1, 0
+				assert 0 > sort [x,   4], [ x,  5]
+				assert 0 > sort [4,   1], [ 5,  1]
+				assert 0 < sort [x,  -1], [ x, -2]
+				assert 0 < sort [-1, -1], [-2, -1]
 
 
 
@@ -56,6 +68,11 @@ describe 'index', () ->
 				assert 0 < sort {test:  4}, {test:  5}
 				assert 0 > sort {test: -1}, {test: -2}
 
+			it 'should sort array values correctly', () ->
+				sort = hifo.highest 1
+				assert 0 < sort [x,  4, x], [x,  5]
+				assert 0 > sort [x, -1],    [x, -2, x]
+
 		context '2-ary sort', ->
 
 			it 'should sort object values correctly', () ->
@@ -64,3 +81,10 @@ describe 'index', () ->
 				assert 0 < sort {foo:  1, bar:  4}, {foo:  1, bar:  5}
 				assert 0 > sort {foo: -1},          {foo: -2}
 				assert 0 > sort {foo:  1, bar: -1}, {foo:  1, bar: -2}
+
+			it 'should sort array values correctly', () ->
+				sort = hifo.highest 1, 0
+				assert 0 < sort [ x,  4], [ x,  5]
+				assert 0 < sort [ 4,  1], [ 5,  1]
+				assert 0 > sort [ x, -1], [ x, -2]
+				assert 0 > sort [-1, -1], [-2, -1]

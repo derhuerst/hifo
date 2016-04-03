@@ -1,6 +1,6 @@
 {
 	"name":        "hifo",
-	"description": "Stores & sorts only the highest values.",
+	"description": "Remembers the highest/lowest values in a data set of any size.",
 	"version":     "0.6.0",
 	"main":        "./src/index.js",
 	"keywords": [

@@ -1,6 +1,6 @@
 # *hifo* – highest in, first out
 
-**Stores and sorts only the highest values.**
+**Remembers the highest/lowest values in a data set of any size.**
 
 If you have a large number of values, but you're only interested in the `n` highest (or lowest) ones, you can sort them using *hifo*.
 

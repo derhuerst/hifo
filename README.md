@@ -1,4 +1,4 @@
-# *hifo* – highest in, first out
+# *hifo* – highest in, first out ⚖
 
 **Remembers the highest/lowest values in a data set of any size.**
 
@@ -12,14 +12,15 @@ If you have a large number of values, but you're only interested in the `n` high
 [![bower version](https://img.shields.io/bower/v/hifo.svg)](bower.json)
 [![build status](https://img.shields.io/travis/derhuerst/hifo.svg)](https://travis-ci.org/derhuerst/hifo)
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/hifo.svg)](https://david-dm.org/derhuerst/hifo#info=devDependencies)
+![ISC-licensed](https://img.shields.io/github/license/derhuerst/hifo.svg)
 
-*hifo* is **[ISC-licensed](LICENSE)**, [thoroughly unit-tested](test/) and embraces [prototypal programming](http://davidwalsh.name/javascript-objects-deconstruction#simpler-object-object).
+*hifo* is [thoroughly unit-tested](test/) and embraces [prototypal programming](http://davidwalsh.name/javascript-objects-deconstruction#simpler-object-object).
 
 
 
 ## Example
 
-Let's assume we have an **array of people**.
+Let's assume we have a huge **array of people**.
 
 ```javascript
 var people = [
@@ -27,7 +28,8 @@ var people = [
 	{ name: 'Eve', age: 45 },
 	{ name: 'Jane', age: 19 },
 	{ name: 'Bob', age: 30 },
-	{ name: 'John', age: 60 }
+	{ name: 'John', age: 60 },
+	// thousands of others
 ];
 ```
 

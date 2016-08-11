@@ -8,9 +8,9 @@ If you have a large number of values, but you're only interested in the `n` high
 - It is **memory-efficient**. If you specifiy its size as `50`, it will only store 50 values in memory.
 - *hifo* works with **numeric values** and **simple objects** out of the box, but you can pass your own [`sort` function](#todo).
 
-[![npm version](https://img.shields.io/npm/v/hifo.svg)](https://www.npmjs.com/package/hifo)
-[![bower version](https://img.shields.io/bower/v/hifo.svg)](bower.json)
 [![build status](https://img.shields.io/travis/derhuerst/hifo.svg)](https://travis-ci.org/derhuerst/hifo)
+[![npm version](https://img.shields.io/npm/v/hifo.svg)](https://www.npmjs.com/package/hifo)
+[![dependency status](https://img.shields.io/david/derhuerst/hifo.svg)](https://david-dm.org/derhuerst/hifo)
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/hifo.svg)](https://david-dm.org/derhuerst/hifo#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/hifo.svg)
 

@@ -1,7 +1,7 @@
 {
 	"name":        "hifo",
 	"description": "Remembers the highest/lowest values in a data set of any size.",
-	"version":     "0.6.0",
+	"version":     "0.6.1",
 	"main":        "./src/index.js",
 	"keywords": [
 		"sort",
@@ -21,7 +21,7 @@
 	"bugs":        "https://github.com/derhuerst/hifo/issues",
 	"devDependencies": {
 		"coffee-script": "^1.10.0",
-		"mocha":         "^2.3.4"
+		"mocha":         "^3.0.2"
 	},
 	"directories": {
 		"lib":     "./src",

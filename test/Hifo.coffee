@@ -1,7 +1,7 @@
 mocha =		require 'mocha'
 assert =	require 'assert'
 
-hifo =		require '../src/index.js'
+hifo =		require '../index.js'
 
 
 

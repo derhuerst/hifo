@@ -10,12 +10,12 @@
 	"homepage":    "https://github.com/derhuerst/hifo",
 	"repository":  "derhuerst/hifo",
 	"issues":        "https://github.com/derhuerst/hifo/issues",
+	"engines":     {"node": ">=6"},
 	"devDependencies": {
 		"coffee-script": "^1.10.0",
 		"mocha":         "^3.0.2"
 	},
 	"directories": {
-		"lib":     "./src",
 		"test":    "./test"
 	},
 	"scripts": {

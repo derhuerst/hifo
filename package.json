@@ -12,14 +12,11 @@
 	"issues":        "https://github.com/derhuerst/hifo/issues",
 	"engines":     {"node": ">=6"},
 	"devDependencies": {
-		"coffee-script": "^1.10.0",
-		"mocha":         "^3.0.2"
-	},
-	"directories": {
-		"test":    "./test"
+		"tape": "^4.6.3",
+		"tap-min": "derhuerst/tap-min"
 	},
 	"scripts": {
-		"test":       "mocha --compilers coffee:coffee-script/register --reporter min ./test",
-		"test:watch": "mocha -w --compilers coffee:coffee-script/register --reporter min ./test"
+		"test": "node test.js | tap-min",
+		"prepublish": "npm test"
 	}
 }

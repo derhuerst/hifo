@@ -24,10 +24,12 @@
 		"node": ">=6"
 	},
 	"devDependencies": {
+		"benchmark": "^2.1.4",
 		"tap-min": "^1.2.2",
 		"tape": "^4.6.3"
 	},
 	"scripts": {
+		"benchmark": "node benchmark.js",
 		"test": "node test.js | tap-min",
 		"prepublishOnly": "npm test"
 	}

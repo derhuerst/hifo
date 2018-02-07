@@ -1,8 +1,6 @@
 # *hifo* – highest in, first out ⚖
 
-**Remembers the highest/lowest values in a data set of any size.**
-
-If you have a large number of values, but you're only interested in the `n` highest (or lowest) ones, you can sort them using *hifo*.
+**Remembers the highest/lowest values in a data set of any size,** if you have a large number of values, but you're only interested in the `n` highest (or lowest) ones. If you looking for a stream version, checkout [hifo-stream](https://github.com/brianshaler/hifo-stream#hifo-stream).
 
 - *hifo* is **fast**. To find the highest `m` of `n` values, the [time complexity is `O(m * n)`](https://en.wikipedia.org/wiki/Time_complexity#Linear_time).
 - It is **memory-efficient**. If you specifiy its size as `50`, it will only store 50 values in memory.
@@ -14,9 +12,6 @@ If you have a large number of values, but you're only interested in the `n` high
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/hifo.svg)](https://david-dm.org/derhuerst/hifo#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/hifo.svg)
 [![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
-
-*hifo* is [thoroughly unit-tested](test/) and embraces [prototypal programming](http://davidwalsh.name/javascript-objects-deconstruction#simpler-object-object).
-
 
 
 ## Example

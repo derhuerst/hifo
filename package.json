@@ -1,7 +1,7 @@
 {
 	"name": "hifo",
 	"description": "Remembers the highest/lowest values in a data set of any size.",
-	"version": "0.7.0",
+	"version": "1.0.0",
 	"main": "index.js",
 	"files": [
 		"index.js",

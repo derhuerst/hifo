@@ -1,6 +1,6 @@
 # *hifo* – highest in, first out ⚖
 
-**Remembers the highest/lowest values in a data set of any size,** if you have a large number of values, but you're only interested in the `n` highest (or lowest) ones. If you looking for a stream version, checkout [hifo-stream](https://github.com/brianshaler/hifo-stream#hifo-stream).
+**Remembers the highest/lowest values in a data set of any size.** Useful if you have a large number of values, but are only interested in the `n` highest (or lowest) ones. If you looking for a stream version, check out [hifo-stream](https://github.com/brianshaler/hifo-stream#hifo-stream).
 
 - *hifo* is **fast**. To find the highest `m` of `n` values, the [time complexity is `O(m * n)`](https://en.wikipedia.org/wiki/Time_complexity#Linear_time).
 - It is **memory-efficient**. If you specifiy its size as `50`, it will only store 50 values in memory.
@@ -12,6 +12,7 @@
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/hifo.svg)](https://david-dm.org/derhuerst/hifo#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/hifo.svg)
 [![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
+[![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
 
 
 ## Example
